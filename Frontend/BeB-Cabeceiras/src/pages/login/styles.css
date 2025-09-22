@@ -1,0 +1,63 @@
+/* container principal em duas colunas */
+.page-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* coluna da imagem */
+.image-section {
+  flex: 0.8; /* ocupa metade da tela */
+  background-color: #EADACB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 80%; /* ajusta a largura da imagem */
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* coluna do login */
+.login-section {
+  flex: 1; /* ocupa metade da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F0
+;
+  gap: 24px;
+}
+
+.login-section h1 {
+  color: #2E2E2E;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.login-section select,
+.login-section button {
+  width: 50%;
+  height: 8vh;
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+
+.login-section select {
+  background-color: #d8d8d8;
+  color: #2E2E2E;
+  border: none;
+  padding: 0 10px;
+}
+
+.login-section button {
+  cursor: pointer;
+  background-color: #a9b9a3;
+  color: #2E2E2E;
+  border: none;
+}
