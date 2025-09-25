@@ -1,0 +1,148 @@
+.venda-container {
+  display: flex;
+}
+
+.venda-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+}
+
+.venda-left {
+  width: 50%;
+  padding-right: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-venda{
+  color: #2E2E2E;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+}
+
+.tabela-itens {
+  border-radius: 5px;
+  padding: 10px;
+  flex-grow: 1;
+  background-color: #D8D8D8;
+}
+
+.title-lista{
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+.cabecalho-tabela {
+  background-color: #F5F5F0;
+  color: #2E2E2E;
+}
+
+.cabecalho-tabela th:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.cabecalho-tabela th:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.input-quantidade {
+  width: 60px;
+  text-align: center;
+}
+
+.btn-remover {
+  color: red;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.total {
+  margin-top: 20px;
+}
+
+.venda-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.botoes-superiores {
+  margin-top: 85px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.btn-produto,
+.btn-vendas {
+  background-color: #d3d3d3;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.icone {
+  width: 100px;
+  height: 100px;
+}
+
+.lista-produtos,
+.info-cliente,
+.info-pagamento {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d3d3d3;
+  margin-top: 20px;
+}
+
+.input-cpf {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.btn-adicionar-cliente {
+  padding: 8px;
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+.info-pagamento select {
+  padding: 8px;
+}
+
+.botoes-acao {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-cancelar {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.btn-confirmar {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+}
