@@ -8,15 +8,36 @@
   display: flex;
 }
 
+/* Coluna 1 */
 .venda-left {
-  width: 50%;
+  width: 36%;
   padding-right: 20px;
   margin-right: 20px;
+  margin-left: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;;
 }
 
+/* Coluna 2 (nova) */
+.venda-middle {
+  margin-top: 30px;
+  width: 33%;
+  margin-right: 60px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Coluna 3 */
+.venda-right {
+  margin-top: 90px;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* (resto do CSS continua igual) */
 .title-venda{
   color: #2E2E2E;
   font-size: 45px;
@@ -30,6 +51,10 @@
   padding: 10px;
   flex-grow: 1;
   background-color: #D8D8D8;
+  max-height: 480px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #F5F5F0 #D8D8D8;
 }
 
 .title-lista{
@@ -42,6 +67,7 @@
 table {
   width: 100%;
   text-align: center;
+  border-spacing: 3px 10px;
 }
 
 .cabecalho-tabela {
@@ -58,26 +84,41 @@ table {
   border-bottom-right-radius: 5px;
 }
 
+.cabecalho-tabela th {
+  padding: 5px 25px;
+}
+
 .input-quantidade {
-  width: 60px;
-  text-align: center;
+  width: 30px;
+  background: none;
+  border-radius: 10px;
+  text-align: right;
+  color: #2E2E2E;
+  font-weight: bold;
 }
 
 .btn-remover {
-  color: red;
-  cursor: pointer;
-  background: none;
-  border: none;
+  background: #F5F5F0;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+}
+
+.btn-adicionar {
+  background: #F5F5F0;
+  width: 50px;
+  height: 30px;
+  padding: 1px;
+  color: #2E2E2E;
+  font-size: 19px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .total {
-  margin-top: 20px;
-}
-
-.venda-right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+  margin-top: 10px;
+  font-size: 22px;
+  text-align: right;
 }
 
 .botoes-superiores {
@@ -101,48 +142,101 @@ table {
   height: 100px;
 }
 
-.lista-produtos,
-.info-cliente,
-.info-pagamento {
-  border: 1px solid #ccc;
+.title-produtos{
+  font-size: 22px;
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.lista-produtos {
+  border: 1px solid #d3d3d3;
   padding: 10px;
   border-radius: 5px;
   background-color: #d3d3d3;
   margin-top: 20px;
+  width: 430px;
+  height: 350px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #F5F5F0 #D8D8D8;
 }
 
-.input-cpf {
-  padding: 8px;
-  margin-right: 10px;
+.select-info {
+  border: 1px solid #d3d3d3;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d3d3d3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.btn-adicionar-cliente {
-  padding: 8px;
-  background-color: green;
-  color: white;
-  border: none;
+.select-info h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #2E2E2E;
 }
 
-.info-pagamento select {
+.select-info select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #2E2E2E;
+  background-color: #F5F5F0;
+  border: 2px solid #d3d3d3;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.select-info select:focus {
+  border-color: #2E2E2E;
+}
+
+.select-info select option {
   padding: 8px;
+}
+
+.input-pesquisa{
+  background-color: #F5F5F0;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  width: 410px;
+  align-self: center;
+  color: #2E2E2E;
+}
+
+.input-valor-pago{
+  background-color: #F5F5F0;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  width: 210px;
+  align-self: center;
+  color: #2E2E2E;
 }
 
 .botoes-acao {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 .btn-cancelar {
   padding: 10px;
-  background-color: red;
+  background-color: #852020;
   color: white;
   border: none;
+  margin-right: 10px;
 }
 
 .btn-confirmar {
   padding: 10px;
-  background-color: green;
+  background-color: #3b672a;
   color: white;
   border: none;
 }

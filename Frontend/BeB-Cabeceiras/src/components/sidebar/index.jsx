@@ -25,9 +25,11 @@ function Sidebar() {
     <div
       style={{
         width: "240px",
-        height: "100vh",
         backgroundColor: "#EADACB",
-        fontSize: "18px"
+        fontSize: "18px",
+        position: "sticky",
+        top: 0,
+        alignSelf: "flex-start"
       }}
     >
       <div
@@ -35,6 +37,7 @@ function Sidebar() {
           flex: 1,
           overflowY: "auto",
           padding: "20px",
+          minHeight: "100vh",
         }}
       >
         <div
@@ -73,11 +76,27 @@ function Sidebar() {
 
         <ul style={{ listStyleType: "none", padding: "0", margin: 25 }}>
           <li
+          style={{ ...liStyle, ...(isActive("/dashboard") && activeLi) }}
+          onMouseEnter={e => e.currentTarget.style.transform = "translateY(-5px)"}
+          onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
+          >
+            <Link to="/dashboard" style={linkStyle}>DASHBOARD</Link>
+          </li>
+
+          <li
           style={{ ...liStyle, ...(isActive("/vendas") && activeLi) }}
           onMouseEnter={e => e.currentTarget.style.transform = "translateY(-5px)"}
           onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
           >
             <Link to="/vendas" style={linkStyle}>VENDAS</Link>
+          </li>
+
+          <li
+          style={{ ...liStyle, ...(isActive("/caixa") && activeLi) }}
+          onMouseEnter={e => e.currentTarget.style.transform = "translateY(-5px)"}
+          onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
+          >
+            <Link to="/caixa" style={linkStyle}>CAIXA</Link>
           </li>
 
           <li
@@ -94,22 +113,6 @@ function Sidebar() {
           onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
           >
             <Link to="/usuarios" style={linkStyle}>USUÁRIOS</Link>
-          </li>
-
-          <li
-          style={{ ...liStyle, ...(isActive("/caixa") && activeLi) }}
-          onMouseEnter={e => e.currentTarget.style.transform = "translateY(-5px)"}
-          onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
-          >
-            <Link to="/caixa" style={linkStyle}>CAIXA</Link>
-          </li>
-
-          <li
-          style={{ ...liStyle, ...(isActive("/dashboard") && activeLi) }}
-          onMouseEnter={e => e.currentTarget.style.transform = "translateY(-5px)"}
-          onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
-          >
-            <Link to="/dashboard" style={linkStyle}>DASHBOARD</Link>
           </li>
 
           <li
